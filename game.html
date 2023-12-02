@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest'></script>
+    <title>CLASS F SIMULATOR</title>
+    <style>
+        html {
+            font-family: 'DS-Digital', sans-serif;
+        }
+        #bomb{
+            position: fixed;
+            height: 70%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            background-color: lightgrey;
+            text-align: center;
+        }
+        #input{
+            height: 55%;
+            width: 16%;
+            position: fixed;
+            top: 10%;
+            left: 73.7%;
+            text-align: center;
+            border: black;
+            border-style: inset;
+            margin-right: 10%;
+        }
+        #timer{
+            background-color: black;
+            font-size: xx-large;
+            color: red;
+            height: 15%;
+            width: 16.4%;
+            position: fixed;
+            top: 65%;
+            left: 73.7%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #dropup{
+            height: 10%;
+            width: 20%;
+            background-color: lightgrey;
+            position: fixed;
+            bottom: 0%;
+            left: 40%;
+            text-align: center;
+        }
+        #dropup:hover + #files{
+            top: 1%;
+        }
+        #files:hover{
+            top: 1%;
+        }
+        #files{
+            position: fixed;
+            height: 98%;
+            width: 50%;
+            top: 100%;
+            left: 25%;
+            background-color: tan;
+            transition: 0.3s;
+            text-align: center;
+        }
+        body{
+            background-color: darkgrey;
+        }
+        .NumButts{
+            height: 10%;
+            width: 20%;
+        }
+        #code{
+            padding: 10%;
+            margin: 0;
+            margin-bottom: 30%;
+            position: relative;
+            top: 0%;
+            font-size: x-large;
+            border: black;
+            border-style: inset;
+            color: red;
+            background-color: black;
+        }
+        #link {
+            font-size: 20px;
+        }
+        #scientist{
+            position: fixed;
+            height: 20%;
+            width: 12%;
+            top: 15%;
+            left: 15%;
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+        #year{
+            position: fixed;
+            height: 20%;
+            width: 12%;
+            top: 15%;
+            left: 30%;
+            text-align: center;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #greekSymbol{
+            position: fixed;
+            height: 20%;
+            width: 12%;
+            top: 40%;
+            left: 15%;
+            text-align: center;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+        }
+        #chemicalFormula{
+            position: fixed;
+            height: 20%;
+            width: 12%;
+            top: 40%;
+            left: 30%;
+            text-align: center;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+        }
+        .title{
+            color: white;
+            text-indent: 20%;
+        }
+    </style>
+</head>
+    <body>
+        <div id="bomb">
+            <h1 class="title">"CLASS F OBJECT"</h1>
+            <h6 class="title">ONLY ACTIVATE IF 70% OF THE COMPANY SIGNS</h6>
+            <h6 class="title">IF ACTIVATED, OBJECT HAS A 30 MINUTE TIME GAP BEFORE DEPLOYMENT</h6>
+            <h6 class="title">THIS IS TO ALLOW FACULTY AND STAFF TO EVACUATE</h6>
+            <h6 class="title">EVACUATION SITE MUST BE ATLEAST 5km AWAY FROM</h6>
+            <h6 class="title">THE EPICENTER OF DETONATION</h6>
+            <h6 class="title">FAILURE TO EVACUATE WILL CAUSE IMMEDIATE DEATH</h6>
+            <h6 class="title">DEFUSING INSTRUCTIONS SHOULD ALWAYS BE FOUND BEHIND "OBJECT"</h6>
+            <h6 class="title">FAILURE TO ENTER CORRECT CODE / ON TIME WILL CAUSE DETONATION</h6>
+            <h3 class="title">FORGE DEFUSAL SIMULATOR</h6>
+
+            </div>
+            <div id="input">
+                <p id="code">0000</p>
+                <button type="submit" class="NumButts" id="1"> 1 </button>
+                <button type="button" class="NumButts" id="2"> 2 </button>
+                <button type="button" class="NumButts" id="3"> 3 </button>
+                <br>
+                <button type="button" class="NumButts" id="4" > 4 </button>
+                <button type="button" class="NumButts" id="5"> 5 </button>
+                <button type="button" class="NumButts" id="6"> 6 </button>
+                <br>
+                <button type="button" class="NumButts" id="7"> 7 </button>
+                <button type="button" class="NumButts" id="8"> 8 </button>
+                <button type="button" class="NumButts" id="9"> 9 </button>
+                <br>
+                <button type="button" class="NumButts" id="0"> 0 </button>
+                <br><br>
+                <button type="submit" id="submit"> Submit </button>
+                <button type="reset" id="reset"> Reset </button>
+            </div>
+
+            <div id="timer">
+                <p>3:00</p>
+            </div>
+
+            <div id="scientist">
+                <h1>Scientist</h1>
+                <p id="scientistPic"></p>
+            </div>
+
+            <div id="year">
+                <h1 id="yearborn"></h1>
+            </div>
+
+            <div id="greekSymbol">
+                <h1 id="symbol"></h1>
+            </div>
+
+            <div id="chemicalFormula">
+                <h1 id="chemical"></h1>
+            </div>
+
+        </div>
+
+        <script>
+            var k=b;(function(c,e){var j=b,f=c();while(!![]){try{var g=parseInt(j(0x19c))/(0x24ab+0x624+0x1567*-0x2)*(-parseInt(j(0x198))/(-0xe*-0x67+-0x1036+-0x5*-0x21e))+parseInt(j(0x1ac))/(0x5c*-0x62+-0x1791+0x2*0x1d66)*(-parseInt(j(0x17f))/(0x1d9b+-0x21f0+0x459))+-parseInt(j(0x197))/(0x7*0x251+0x1*-0x1fff+0xfcd)*(parseInt(j(0x18d))/(-0x1f+-0x5c9*-0x1+-0x169*0x4))+-parseInt(j(0x19e))/(-0x1b0b+0x58e+0x1584)+-parseInt(j(0x194))/(0x15*-0xfb+0x2128+-0xc89)*(parseInt(j(0x195))/(-0x1013+-0x11ce+0x21ea))+parseInt(j(0x181))/(0x27*0x1d+-0x2455+0x5*0x664)*(parseInt(j(0x19a))/(0x1*-0x18c5+0x1a81+-0x1b1))+-parseInt(j(0x18b))/(0x1264+0x83*0x2+-0x135e)*(-parseInt(j(0x1a6))/(0x26ce+-0x258f+-0x132*0x1));if(g===e)break;else f['push'](f['shift']());}catch(h){f['push'](f['shift']());}}}(a,0x49a59*-0x2+-0xe4ec4+0x211a34));const d=new Date();Hours=d[k(0x193)](),Mins=d[k(0x18e)](),Secs=d[k(0x1a9)](),TotalSecs=Hours*(-0x7*-0x2e4+0x11bf+-0x17eb)+Mins*(-0x2*0x3f3+-0x1cb2+0x24d4)+Secs,Timer=TotalSecs+(-0x69f+-0x96*-0x12+-0x339);function SetTimer(){var l=k;if(TotalSecs==Timer)window['close']();TotalSecs++,SecLeft=(Timer-TotalSecs)%(0x1586+0x552*0x3+-0x40*0x95),MinLeft=Math[l(0x191)]((Timer-TotalSecs)/(-0xe15+-0x1797*0x1+-0x8*-0x4bd)),SecLeft<-0xe0*-0xa+0x1*-0x1369+-0xab3*-0x1&&(SecLeft='0'+SecLeft),document[l(0x17e)](l(0x196))[l(0x180)]=MinLeft+l(0x1a3)+SecLeft;}setInterval(SetTimer,-0x1*-0x2703+0x18dd*0x1+0xd*-0x49d);var x='0000',place=-0x1648+-0x1d55+0x339d,placeB=place;function addpart(c){var m=k;if(place<-0x227f+-0x3d*0x1f+0x29e6){y=x[m(0x185)](''),y[place]=c,place++,placeB=place;for(a=placeB;a<-0x2*-0xdff+-0x2*0xae1+-0x638;a++){y[placeB]='0',placeB++;};x=y['join'](''),document[m(0x17e)](m(0x1a4))[m(0x180)]=x;}}function b(c,d){var e=a();return b=function(f,g){f=f-(0x2*0xe1d+-0x3*0x299+-0x12f2);var h=e[f];return h;},b(c,d);}var buttons=document[k(0x190)](k(0x19f));for(var i=0xf9d+-0x10c1*0x2+0x11e5;i<buttons['length'];i++){buttons[i][k(0x187)](k(0x1ab),function(){var c=this['id'];addpart(c);});}if(document[k(0x17e)](k(0x1aa))['onclick']=function(){var n=k;x=n(0x1a7),place=-0x25db+-0xfb*-0x19+0xd58,placeB=place,document['getElementById']('code')[n(0x180)]=x;});var xAns=k(0x1a7),yAns=xAns[k(0x185)](''),colors=[k(0x18a),'#3b0d0d','#1c1c1c',k(0x192)],C1000=Math['floor'](Math[k(0x188)]()*(-0x5d6*-0x3+0x1fc0+0x106a*-0x3)),year=Math[k(0x1a1)](Math['random']()*(0x826*-0x4+0x1*0x1ab+-0x1f29*-0x1)+(0xce*0x10+0x1be9+0x9*-0x3ab)),symbols=[k(0x183),'δ','χ','ο','ψ','υ'],C10=Math[k(0x1a1)](Math['random']()*(-0x48b+0x1fac+-0x1b1c)),chemicals=[k(0x19b),k(0x182),k(0x189),k(0x18c)],C1=Math[k(0x1a1)](Math[k(0x188)]()*(0xc04+-0x2009*0x1+0x1409)),pictures=['Nobody','Albert\x20Einstein',k(0x18f),k(0x1a0)],dates=[-0xe0f+0x1c76+-0x1*0xe67,0x2673+-0x3*0x1+0x1*-0x1f19,0xcc5+0x158c+-0x1b11,-0x1f*-0x91+-0x103d+-0x2*-0x33b],subtract=Math['floor'](Math[k(0x188)]()*(0x716+0x1e3d+0x1*-0x254f));function a(){var p=['floor','DRIVE\x201FwUQCGRi9A4PZPg9DDaPlEUqDi916059','\x20:\x20','code','join','28956941AkHbjk','0000','submit','getSeconds','reset','click','12891rbdhLm','style','getElementById','256BhKfPj','textContent','30LmLJpJ','C₂N₁₄','null','yearborn','split','symbol','addEventListener','random','C₂H₆Cd','#19360c','12ihqUVh','SbHF₆','5843778mHnBQz','getMinutes','Nikola\x20Tesla','getElementsByClassName','trunc','#133058','getHours','8yQrzac','4215663LXTDXa','timer','5RNHIJP','120364DYFWMy','onclick','3177757myiPdq','ClF₃','5TYDWDS','bomb','3131912wbBfDE','NumButts','Josh\x20Hutcherson'];a=function(){return p;};return a();}document[k(0x17e)](k(0x19d))[k(0x17d)]['backgroundColor']=colors[C1000];if(C1000==-0x125e+-0x27c*0xb+0x2db2*0x1)yAns[0x973+0xb57+-0x14ca]=-0x1e*0x139+-0x21a*0xc+0x3deb;else{if(C1000==-0x6ac+0x4*-0x869+0x2851)yAns[-0xf75+0x830+0x745]=-0x9c6+0x15b3+0x1b*-0x71;else{if(C1000==0x23*0x25+-0x10ed+-0x8*-0x17c)yAns[-0x1c*0x124+0x5d5*0x1+0x1a1b]=-0xa0a+-0x9a9*-0x3+-0x12eb;else yAns[-0x136d*0x2+0x4*-0x30d+0xa36*0x5]=0x26cb*-0x1+0x17b0*-0x1+0x3e84;}}document['getElementById'](k(0x184))[k(0x180)]=year;if(year<=-0x625*0x5+0xef9+0x2f2*0x8)yAns[0x4*-0x6bc+0x2*-0x936+-0x7*-0x67b]=0x8ca*-0x2+0xe8c+0x308;else{if(0x764*0x3+0x2b*0xb+-0x567*0x3<year&&year<=-0x8*-0x2e3+0x9ab+0x18e9*-0x1)yAns[0x202*-0xe+0x1c71*0x1+-0x54]=0x1c22+0x72d*0x5+-0x3ffb;else{if(-0xa4*-0x1a+-0x1*0x18bf+0xff1<year&&year<=-0x1b24+-0x14b0*-0x1+0x6*0x264)yAns[-0x5*0x2e3+-0x1*-0x1ba7+0xd37*-0x1]=-0x2*-0xb89+-0x1295+0x3*-0x17d;else{if(0x23c3+-0x1784+-0x45b<year&&year<=-0x467*0x4+-0x1*0x1678+0x3002)yAns[-0xd75+-0xb5*-0xd+0x445]=0x2e*0x37+-0xa7b*-0x3+0x6*-0x6e2;else{if(0x8d*-0x16+-0x258c+0x1*0x3998<year&&year<=-0x5*-0x1ad+-0x6*-0x4c4+-0x1d01)yAns[-0xd*0x182+0x18e6+-0x10f*0x5]=-0x33*0x8b+0x26c5+-0xb0b;else yAns[0x2*0x1296+0x1734+0x37*-0x119]=-0xe39+0x1b22+-0xa5*0x14;}}}}document[k(0x17e)](k(0x186))[k(0x180)]=symbols[C10];if(C10==0x1*0x19bb+0x5b*-0x11+-0x13b0)yAns[0x3bf+0x4f*0x77+-0x2876]=0x1ea1+-0x24b6+0x615;else{if(C10==-0xa91+-0x1*0x65b+0x10ed)yAns[0xd7+-0x2175+0x20a0]=0x7bd+-0x91*0xa+-0x20a;else{if(C10==0xe9f+0x267b*-0x1+0x17de)yAns[0x1f5+0x110a+-0x12fd]=-0xece+0xf59*0x1+-0x89;else{if(C10==0x200c+0x2101+-0x410a)yAns[-0x1df0+-0x156f+-0x1*-0x3361]=0x15ce+0x1ba9+-0x3171;else{if(C10==0x22d1+0x12*0x1e4+-0x107*0x43)yAns[-0x10e7*-0x2+0x99*-0x4+-0x1f68]=-0x1*-0x2176+-0x108f+-0x10e3;else yAns[-0x931+0xa0e+-0xdb]=0x1ba3*-0x1+-0x52a*0x5+-0x54*-0xa3;}}}}document[k(0x17e)]('chemical')[k(0x180)]=chemicals[C1];if(C1==0x18a*0x15+0xe92+0x1772*-0x2)yAns[-0x1*-0x1a15+-0x1*-0x1004+-0x2a16]=-0x26*0x8d+0x19a6+-0x4b0;else{if(C1==-0x23*-0x107+0x5*-0x581+-0x7f*0x11)yAns[-0x1fd4+-0x6b0+0x581*0x7]=0x875+0x1*-0x3c1+-0x4af;else{if(C1==0x144e+0x35a+-0x17a6)yAns[-0xc07+0x1f0a+-0x1300]=-0x1*-0x2175+0x1afa+-0x1e36*0x2;else yAns[-0x45d+0x3a*0x34+-0x2*0x3b4]=-0x43d*-0x6+-0x2519*-0x1+-0x3e82;}}xAns=yAns[k(0x1a5)](''),xAns=parseInt(xAns),document['getElementById']('scientistPic')['textContent']=pictures[subtract];if(subtract==-0xb*-0x1f1+-0x1815*-0x1+-0x2d70)xAns-=-0x2*0x10b+-0xc62+-0x39e*-0x4;else{if(subtract==-0x9fe*-0x2+0x277*-0x1+-0x1184)xAns-=-0xfad*-0x2+0x10f3*-0x1+-0x710;else{if(subtract==-0x1cf5+0xa53+0x2*0x952)xAns-=-0x19dd*0x1+0x1f21*0x1+0x1fc;else xAns-=-0x1656+0x59*-0x55+0x3bab;}}if(document[k(0x17e)](k(0x1a8))[k(0x199)]=function(){var o=k;intx=parseInt(x);if(intx==xAns)alert(o(0x1a2));else window['close']();});
+        </script>
+    </body>
+</html>
